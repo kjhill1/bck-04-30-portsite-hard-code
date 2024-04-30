@@ -1,0 +1,220 @@
+
+/* ***************ABOUT CSS******************** */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  /* height: 100%; */
+
+}
+
+body {
+  /* display: flex;
+  flex-direction: column; */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* width: 100%; */
+  height: 100vh;
+  text-align: center;
+  /* background-color: rgb(137, 137, 223);
+  background-image: url('tree-hero-cropped.jpg');
+  background-size: cover;  */
+  /* background-position: top;  */
+  /* background-position: center;  */
+  /* background-repeat: none; */
+}
+
+
+
+.header {
+    background: #ffffff;
+    padding: .5rem 0;
+  }
+  
+
+/* .nav--ul__one {
+    margin: 0 auto;
+} */
+
+/* .nav-container {
+    display: flex;
+    gap: 1.6rem;
+    font-size: 1.2rem;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(146, 228, 207);
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2rem; 
+    font-weight: bold; 
+} */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem; 
+  font-weight: bold; 
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav--ul__one {
+  margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-container, .nav--ul__one {
+    display: flex;
+    gap: 1.6rem;
+    font-size: 1.2rem;
+}
+
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  color:rgb(255, 127, 180);
+  background-color: rgb(214, 144, 247);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0; 
+}
+
+
+/* *********Tablet ********** */
+@media only screen and (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+    background-color: rgb(245, 240, 220);
+    background-size: cover; 
+    background-position: top;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+
+  .nav-container {
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.nav {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav--ul__one {
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.hamburger-menu {
+    display: block;
+    z-index: 2;
+
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 6rem;
+    align-items: center;
+    text-align: center;
+    background-color: #4D4DDB;
+    color: white;
+
+    transition: 0.15s ease-in-out;
+}
+
+.nav.active {
+    right: 0;
+}
+
+}
+
+
+
+/* Mobile styles (up to 480px) */
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    /* background-color: rgb(145, 214, 247);
+    background-image: url('tree-hero-cropped-tablet.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; */
+    min-height: 100vh;
+
+  }
+  .nav-container .logo {
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.nav {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav--ul__one {
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.hamburger-menu {
+    display: block;
+    z-index: 2;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 6rem;
+    align-items: center;
+    text-align: center;
+    background-color: #4D4DDB;
+    color: white;
+
+    transition: 0.15s ease-in-out;
+}
+
+.nav.active {
+    right: 0;
+}
+
+}

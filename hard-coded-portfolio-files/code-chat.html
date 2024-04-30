@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .hamburger,
+        .close {
+            display: none; /* Hide both hamburger and close icons by default */
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            vertical-align: top;
+            text-align: center; /* Center align the content */
+        }
+
+        section img {
+            width: 100%; /* Make the image fill the width of the section */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Add some space below the image */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 780px) {
+            nav ul {
+                display: none; /* Hide the navigation menu by default on smaller screens */
+            }
+            nav.open ul {
+                display: block; /* Display the navigation menu when the hamburger menu is clicked */
+            }
+            nav .hamburger {
+                display: block; /* Display the hamburger menu icon on smaller screens */
+            }
+            nav ul li {
+                display: block; /* Display navigation items as block elements */
+                margin-right: 0; /* Remove right margin for navigation items */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav ul {
+                display: none; /* Hide the navigation menu by default on smaller screens */
+            }
+            nav.open ul {
+                display: block; /* Display the navigation menu when the hamburger menu is clicked */
+            }
+            nav .hamburger {
+                display: block; /* Display the hamburger menu icon on smaller screens */
+            }
+            nav ul li {
+                display: block; /* Display navigation items as block elements */
+                margin-right: 0; /* Remove right margin for navigation items */
+            }
+            section {
+                width: 90%; /* Adjust section width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="hamburger">&#9776;</div> <!-- Hamburger menu icon -->
+        <div class="close">&#10005;</div> <!-- Close icon -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <main>
+        <section>
+            <img src="image1.jpg" alt="Image 1">
+            <h2>Section 1</h2>
+            <p>This is section 1 content.</p>
+        </section>
+        <section>
+            <img src="image2.jpg" alt="Image 2">
+            <h2>Section 2</h2>
+            <p>This is section 2 content.</p>
+        </section>
+        <section>
+            <img src="image3.jpg" alt="Image 3">
+            <h2>Section 3</h2>
+            <p>This is section 3 content.</p>
+        </section>
+        <section>
+            <img src="image4.jpg" alt="Image 4">
+            <h2>Section 4</h2>
+            <p>This is section 4 content.</p>
+        </section>
+        <section>
+            <img src="image5.jpg" alt="Image 5">
+            <h2>Section 5</h2>
+            <p>This is section 5 content.</p>
+        </section>
+        <section>
+            <img src="image6.jpg" alt="Image 6">
+            <h2>Section 6</h2>
+            <p>This is section 6 content.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for toggling the visibility of the navigation menu
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.querySelector('.hamburger');
+            var close = document.querySelector('.close');
+            var nav = document.querySelector('nav');
+
+            hamburger.addEventListener('click', function() {
+                nav.classList.add('open');
+            });
+
+            close.addEventListener('click', function() {
+                nav.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

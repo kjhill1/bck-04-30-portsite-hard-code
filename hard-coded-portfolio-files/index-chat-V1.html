@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage with Hamburger Menu</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: none; /* Initially hide the nav for mobile */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu-icon {
+            display: none; /* Initially hide the menu icon for desktop */
+            cursor: pointer;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            vertical-align: top;
+            text-align: center; /* Center align the content */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 1024px) {
+            nav ul {
+                display: none; /* Hide the inline nav for tablets */
+            }
+            .menu-icon {
+                display: block; /* Show the menu icon for tablets */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: none; /* Hide the nav for mobile */
+            }
+            nav.active {
+                display: block; /* Show the nav when active for mobile */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            section {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776; <!-- Hamburger icon -->
+    </div>
+
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Section 1</h2>
+            <p>This is section 1 content.</p>
+        </section>
+        <section>
+            <h2>Section 2</h2>
+            <p>This is section 2 content.</p>
+        </section>
+        <section>
+            <h2>Section 3</h2>
+            <p>This is section 3 content.</p>
+        </section>
+        <section>
+            <h2>Section 4</h2>
+            <p>This is section 4 content.</p>
+        </section>
+        <section>
+            <h2>Section 5</h2>
+            <p>This is section 5 content.</p>
+        </section>
+        <section>
+            <h2>Section 6</h2>
+            <p>This is section 6 content.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("navbar");
+            nav.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
